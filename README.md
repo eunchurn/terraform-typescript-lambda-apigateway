@@ -6,8 +6,8 @@ TypeScript Lambda handler deployment and API Gateway v2 public endpoint
 
 ![infra](infra.png)
 
-[Show Graph](https://eunchurn.github.io/terraform-typescript-lambda-apigateway/)
-[Blog post](https://www.eunchurn.com/blog/development/2022-10-23-tWIL)
+- [Show Infra Graph](https://eunchurn.github.io/terraform-typescript-lambda-apigateway/)
+- [Blog post](https://www.eunchurn.com/blog/development/2022-10-23-tWIL)
 
 ## Prerequisite
 
