@@ -1,0 +1,998 @@
+{
+    "edges": [
+        {
+            "edge_type": 1,
+            "source": "[root] aws_acm_certificate.certificate (expand)",
+            "svg_id": "edge_0",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_acm_certificate_validation.dns_validation (expand)",
+            "svg_id": "edge_1",
+            "target": "[root] aws_route53_record.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_api.api_gateway_rest_api (expand)",
+            "svg_id": "edge_2",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_api_mapping.demo (expand)",
+            "svg_id": "edge_3",
+            "target": "[root] aws_apigatewayv2_domain_name.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_api_mapping.demo (expand)",
+            "svg_id": "edge_4",
+            "target": "[root] aws_apigatewayv2_stage.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_domain_name.demo (expand)",
+            "svg_id": "edge_5",
+            "target": "[root] aws_acm_certificate.certificate (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_integration.api_gateway_rest_api (expand)",
+            "svg_id": "edge_6",
+            "target": "[root] aws_apigatewayv2_api.api_gateway_rest_api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_integration.api_gateway_rest_api (expand)",
+            "svg_id": "edge_7",
+            "target": "[root] aws_lambda_function.lambda (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_route.demo-api (expand)",
+            "svg_id": "edge_8",
+            "target": "[root] aws_apigatewayv2_integration.api_gateway_rest_api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_stage.demo (expand)",
+            "svg_id": "edge_9",
+            "target": "[root] aws_apigatewayv2_api.api_gateway_rest_api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_apigatewayv2_stage.demo (expand)",
+            "svg_id": "edge_10",
+            "target": "[root] aws_cloudwatch_log_group.demo-api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_cloudwatch_log_group.api_gw (expand)",
+            "svg_id": "edge_11",
+            "target": "[root] aws_apigatewayv2_api.api_gateway_rest_api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_cloudwatch_log_group.demo-api (expand)",
+            "svg_id": "edge_12",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_iam_policy.lambda_policy (orphan)",
+            "svg_id": "edge_13",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_iam_policy_attachment.lambda_attachment (orphan)",
+            "svg_id": "edge_14",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_iam_role.lambda_exec (expand)",
+            "svg_id": "edge_15",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_iam_role.lambda_role (orphan)",
+            "svg_id": "edge_16",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_iam_role_policy_attachment.lambda_policy (expand)",
+            "svg_id": "edge_17",
+            "target": "[root] aws_iam_role.lambda_exec (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_18",
+            "target": "[root] aws_iam_role.lambda_exec (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_19",
+            "target": "[root] aws_lambda_layer_version.dependency_layer (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_20",
+            "target": "[root] data.archive_file.function_archive (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_21",
+            "target": "[root] local.lambda_memory (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_22",
+            "target": "[root] local.name (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_23",
+            "target": "[root] var.THIRD_PARTY_API_ID"
+        },
+        {
+            "edge_type": 2,
+            "source": "[root] aws_lambda_function.lambda (expand)",
+            "svg_id": "edge_24",
+            "target": "[root] var.THIRD_PARTY_API_SECRET"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_layer_version.dependency_layer (expand)",
+            "svg_id": "edge_25",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_permission.api_gw (expand)",
+            "svg_id": "edge_26",
+            "target": "[root] aws_apigatewayv2_api.api_gateway_rest_api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_lambda_permission.api_gw (expand)",
+            "svg_id": "edge_27",
+            "target": "[root] aws_lambda_function.lambda (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_route53_record.api_gateway (expand)",
+            "svg_id": "edge_28",
+            "target": "[root] aws_apigatewayv2_domain_name.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_route53_record.api_gateway (expand)",
+            "svg_id": "edge_29",
+            "target": "[root] aws_route53_zone.platform_sub_demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_route53_record.demo (expand)",
+            "svg_id": "edge_30",
+            "target": "[root] aws_acm_certificate.certificate (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_route53_record.demo (expand)",
+            "svg_id": "edge_31",
+            "target": "[root] aws_route53_zone.platform_sub_demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_route53_record.platform_sub-ns (expand)",
+            "svg_id": "edge_32",
+            "target": "[root] aws_route53_zone.platform_sub_demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] aws_route53_zone.platform_sub_demo (expand)",
+            "svg_id": "edge_33",
+            "target": "[root] data.aws_route53_zone.platform (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] data.archive_file.function_archive (expand)",
+            "svg_id": "edge_34",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/archive\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] data.aws_route53_zone.platform (expand)",
+            "svg_id": "edge_35",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] local.tags (expand)",
+            "svg_id": "edge_36",
+            "target": "[root] local.email (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] output.api_base_url (expand)",
+            "svg_id": "edge_37",
+            "target": "[root] aws_apigatewayv2_stage.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] output.api_domain (expand)",
+            "svg_id": "edge_38",
+            "target": "[root] aws_apigatewayv2_domain_name.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] output.function_name (expand)",
+            "svg_id": "edge_39",
+            "target": "[root] aws_lambda_function.lambda (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/archive\\\"] (close)",
+            "svg_id": "edge_40",
+            "target": "[root] data.archive_file.function_archive (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_41",
+            "target": "[root] aws_acm_certificate_validation.dns_validation (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_42",
+            "target": "[root] aws_apigatewayv2_api_mapping.demo (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_43",
+            "target": "[root] aws_apigatewayv2_route.demo-api (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_44",
+            "target": "[root] aws_cloudwatch_log_group.api_gw (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_45",
+            "target": "[root] aws_iam_policy.lambda_policy (orphan)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_46",
+            "target": "[root] aws_iam_policy_attachment.lambda_attachment (orphan)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_47",
+            "target": "[root] aws_iam_role.lambda_role (orphan)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_48",
+            "target": "[root] aws_iam_role_policy_attachment.lambda_policy (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_49",
+            "target": "[root] aws_lambda_permission.api_gw (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_50",
+            "target": "[root] aws_route53_record.api_gateway (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "edge_51",
+            "target": "[root] aws_route53_record.platform_sub-ns (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]",
+            "svg_id": "edge_52",
+            "target": "[root] var.aws_profile"
+        },
+        {
+            "edge_type": 2,
+            "source": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]",
+            "svg_id": "edge_53",
+            "target": "[root] var.aws_region"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_54",
+            "target": "[root] data.aws_iam_policy_document.lambda_assume_role_document (orphan)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_55",
+            "target": "[root] data.aws_iam_policy_document.lambda_document (orphan)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_56",
+            "target": "[root] local.author (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_57",
+            "target": "[root] local.tags (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_58",
+            "target": "[root] output.api_base_url (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_59",
+            "target": "[root] output.api_domain (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_60",
+            "target": "[root] output.function_name (expand)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_61",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/archive\\\"] (close)"
+        },
+        {
+            "edge_type": 1,
+            "source": "[root] root",
+            "svg_id": "edge_62",
+            "target": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)"
+        },
+        {
+            "edge_type": 3,
+            "source": "[root] var.THIRD_PARTY_API_ID",
+            "svg_id": "edge_63",
+            "target": "[root] var.THIRD_PARTY_API_SECRET"
+        },
+        {
+            "edge_type": 3,
+            "source": "[root] var.aws_profile",
+            "svg_id": "edge_64",
+            "target": "[root] var.aws_region"
+        }
+    ],
+    "nodes": [
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_acm_certificate.certificate (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "certificate",
+            "simple_name": "aws_acm_certificate.certificate (expand)",
+            "svg_id": "node_0",
+            "type": "aws_acm_certificate"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_acm_certificate_validation.dns_validation (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "dns_validation",
+            "simple_name": "aws_acm_certificate_validation.dns_validation (expand)",
+            "svg_id": "node_1",
+            "type": "aws_acm_certificate_validation"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_apigatewayv2_api.api_gateway_rest_api (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_gateway_rest_api",
+            "simple_name": "aws_apigatewayv2_api.api_gateway_rest_api (expand)",
+            "svg_id": "node_2",
+            "type": "aws_apigatewayv2_api"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_apigatewayv2_api_mapping.demo (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "demo",
+            "simple_name": "aws_apigatewayv2_api_mapping.demo (expand)",
+            "svg_id": "node_3",
+            "type": "aws_apigatewayv2_api_mapping"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_apigatewayv2_domain_name.demo (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "demo",
+            "simple_name": "aws_apigatewayv2_domain_name.demo (expand)",
+            "svg_id": "node_4",
+            "type": "aws_apigatewayv2_domain_name"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_apigatewayv2_integration.api_gateway_rest_api (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_gateway_rest_api",
+            "simple_name": "aws_apigatewayv2_integration.api_gateway_rest_api (expand)",
+            "svg_id": "node_5",
+            "type": "aws_apigatewayv2_integration"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_apigatewayv2_route.demo-api (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "demo-api",
+            "simple_name": "aws_apigatewayv2_route.demo-api (expand)",
+            "svg_id": "node_6",
+            "type": "aws_apigatewayv2_route"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_apigatewayv2_stage.demo (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "demo",
+            "simple_name": "aws_apigatewayv2_stage.demo (expand)",
+            "svg_id": "node_7",
+            "type": "aws_apigatewayv2_stage"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_cloudwatch_log_group.api_gw (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_gw",
+            "simple_name": "aws_cloudwatch_log_group.api_gw (expand)",
+            "svg_id": "node_8",
+            "type": "aws_cloudwatch_log_group"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_cloudwatch_log_group.demo-api (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "demo-api",
+            "simple_name": "aws_cloudwatch_log_group.demo-api (expand)",
+            "svg_id": "node_9",
+            "type": "aws_cloudwatch_log_group"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_iam_policy.lambda_policy (orphan)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_policy",
+            "simple_name": "aws_iam_policy.lambda_policy (orphan)",
+            "svg_id": "node_10",
+            "type": "aws_iam_policy"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_iam_policy_attachment.lambda_attachment (orphan)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_attachment",
+            "simple_name": "aws_iam_policy_attachment.lambda_attachment (orphan)",
+            "svg_id": "node_11",
+            "type": "aws_iam_policy_attachment"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_iam_role.lambda_exec (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_exec",
+            "simple_name": "aws_iam_role.lambda_exec (expand)",
+            "svg_id": "node_12",
+            "type": "aws_iam_role"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_iam_role.lambda_role (orphan)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_role",
+            "simple_name": "aws_iam_role.lambda_role (orphan)",
+            "svg_id": "node_13",
+            "type": "aws_iam_role"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_iam_role_policy_attachment.lambda_policy (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_policy",
+            "simple_name": "aws_iam_role_policy_attachment.lambda_policy (expand)",
+            "svg_id": "node_14",
+            "type": "aws_iam_role_policy_attachment"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_lambda_function.lambda (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda",
+            "simple_name": "aws_lambda_function.lambda (expand)",
+            "svg_id": "node_15",
+            "type": "aws_lambda_function"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_lambda_layer_version.dependency_layer (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "dependency_layer",
+            "simple_name": "aws_lambda_layer_version.dependency_layer (expand)",
+            "svg_id": "node_16",
+            "type": "aws_lambda_layer_version"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_lambda_permission.api_gw (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_gw",
+            "simple_name": "aws_lambda_permission.api_gw (expand)",
+            "svg_id": "node_17",
+            "type": "aws_lambda_permission"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_route53_record.api_gateway (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_gateway",
+            "simple_name": "aws_route53_record.api_gateway (expand)",
+            "svg_id": "node_18",
+            "type": "aws_route53_record"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_route53_record.demo (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "demo",
+            "simple_name": "aws_route53_record.demo (expand)",
+            "svg_id": "node_19",
+            "type": "aws_route53_record"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_route53_record.platform_sub-ns (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "platform_sub-ns",
+            "simple_name": "aws_route53_record.platform_sub-ns (expand)",
+            "svg_id": "node_20",
+            "type": "aws_route53_record"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] aws_route53_zone.platform_sub_demo (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "platform_sub_demo",
+            "simple_name": "aws_route53_zone.platform_sub_demo (expand)",
+            "svg_id": "node_21",
+            "type": "aws_route53_zone"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] data.archive_file.function_archive (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "function_archive",
+            "simple_name": "data.archive_file.function_archive (expand)",
+            "svg_id": "node_22",
+            "type": "archive_file"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] data.aws_iam_policy_document.lambda_assume_role_document (orphan)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_assume_role_document",
+            "simple_name": "data.aws_iam_policy_document.lambda_assume_role_document (orphan)",
+            "svg_id": "node_23",
+            "type": "aws_iam_policy_document"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] data.aws_iam_policy_document.lambda_document (orphan)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_document",
+            "simple_name": "data.aws_iam_policy_document.lambda_document (orphan)",
+            "svg_id": "node_24",
+            "type": "aws_iam_policy_document"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] data.aws_route53_zone.platform (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "platform",
+            "simple_name": "data.aws_route53_zone.platform (expand)",
+            "svg_id": "node_25",
+            "type": "aws_route53_zone"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] provider[\\\"registry.terraform.io/hashicorp/archive\\\"]",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "io/hashicorp/archive\\\"]",
+            "simple_name": "provider[\\\"registry.terraform.io/hashicorp/archive\\\"]",
+            "svg_id": "node_26",
+            "type": "terraform"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "io/hashicorp/aws\\\"]",
+            "simple_name": "provider[\\\"registry.terraform.io/hashicorp/aws\\\"]",
+            "svg_id": "node_27",
+            "type": "terraform"
+        },
+        {
+            "cluster": "cluster[root] aws_lambda_function.lambda (expand)_var_",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] var.THIRD_PARTY_API_ID",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "THIRD_PARTY_API_ID",
+            "simple_name": "var.THIRD_PARTY_API_ID",
+            "svg_id": "node_28",
+            "type": "var"
+        },
+        {
+            "cluster": "cluster[root] aws_lambda_function.lambda (expand)_var_",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] var.THIRD_PARTY_API_SECRET",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "THIRD_PARTY_API_SECRET",
+            "simple_name": "var.THIRD_PARTY_API_SECRET",
+            "svg_id": "node_29",
+            "type": "var"
+        },
+        {
+            "cluster": "cluster[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]_var_",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] var.aws_profile",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "aws_profile",
+            "simple_name": "var.aws_profile",
+            "svg_id": "node_30",
+            "type": "var"
+        },
+        {
+            "cluster": "cluster[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"]_var_",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] var.aws_region",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "aws_region",
+            "simple_name": "var.aws_region",
+            "svg_id": "node_31",
+            "type": "var"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] local.lambda_memory (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "lambda_memory",
+            "simple_name": "local.lambda_memory (expand)",
+            "svg_id": "node_32",
+            "type": "local"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] local.name (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "name",
+            "simple_name": "local.name (expand)",
+            "svg_id": "node_33",
+            "type": "local"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] local.tags (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "tags",
+            "simple_name": "local.tags (expand)",
+            "svg_id": "node_34",
+            "type": "local"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] local.email (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "email",
+            "simple_name": "local.email (expand)",
+            "svg_id": "node_35",
+            "type": "local"
+        },
+        {
+            "cluster": "cluster[root] root_output_[root] aws_apigatewayv2_stage.demo (expand)",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] output.api_base_url (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_base_url",
+            "simple_name": "output.api_base_url (expand)",
+            "svg_id": "node_36",
+            "type": "output"
+        },
+        {
+            "cluster": "cluster[root] root_output_[root] aws_apigatewayv2_domain_name.demo (expand)",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] output.api_domain (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "api_domain",
+            "simple_name": "output.api_domain (expand)",
+            "svg_id": "node_37",
+            "type": "output"
+        },
+        {
+            "cluster": "cluster[root] root_output_[root] aws_lambda_function.lambda (expand)",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] output.function_name (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "function_name",
+            "simple_name": "output.function_name (expand)",
+            "svg_id": "node_38",
+            "type": "output"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] provider[\\\"registry.terraform.io/hashicorp/archive\\\"] (close)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "io/hashicorp/archive\\\"]",
+            "simple_name": "provider[\\\"registry.terraform.io/hashicorp/archive\\\"] (close)",
+            "svg_id": "node_39",
+            "type": "terraform"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "io/hashicorp/aws\\\"]",
+            "simple_name": "provider[\\\"registry.terraform.io/hashicorp/aws\\\"] (close)",
+            "svg_id": "node_40",
+            "type": "terraform"
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] root",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "",
+            "simple_name": "root",
+            "svg_id": "node_41",
+            "type": ""
+        },
+        {
+            "cluster": "root",
+            "definition": "",
+            "group": 20000,
+            "label": "[root] local.author (expand)",
+            "module": "root",
+            "modules": [
+                "root"
+            ],
+            "resource_name": "author",
+            "simple_name": "local.author (expand)",
+            "svg_id": "node_42",
+            "type": "local"
+        }
+    ]
+}
