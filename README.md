@@ -1,3 +1,5 @@
+[![tfsec](https://github.com/eunchurn/terraform-typescript-lambda-apigateway/actions/workflows/tfsec.yml/badge.svg)](https://github.com/eunchurn/terraform-typescript-lambda-apigateway/actions/workflows/tfsec.yml)
+
 # Terraform TypeScript Lambda & API Gateway Infrastructure
 
 TypeScript Lambda handler deployment and API Gateway v2 public endpoint 
