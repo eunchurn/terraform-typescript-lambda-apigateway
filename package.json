@@ -14,7 +14,7 @@
     "deploy:all": "yarn script:build-layer; yarn tf:apply",
     "update:all": "yarn tf:destroy -auto-approve; yarn deploy:all",
     "cleanup": "rm -rf lambda/dist/*",
-    "graph": "cd terraform; terraform graph | blast-radius --svg > ../page/graph.svg; terraform graph | blast-radius --json > ../page/graph.json"
+    "graph": "cd terraform; terraform graph | blast-radius --svg > ../docs/graph.svg; terraform graph | blast-radius --json > ../docs/graph.json"
   },
   "repository": {
     "type": "git",
