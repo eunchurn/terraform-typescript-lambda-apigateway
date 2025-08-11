@@ -29,7 +29,7 @@
   "homepage": "https://github.com/eunchurn/terraform-typescript-lambda-apigateway#readme",
   "devDependencies": {
     "@eunchurn/eslint-config": "^0.1.11",
-    "@eunchurn/prettier-config": "^0.0.4",
+    "@eunchurn/prettier-config": "^0.0.6",
     "@types/aws-lambda": "^8.10.108",
     "@types/jest": "^29.2.0",
     "@types/module-alias": "^2.0.1",
