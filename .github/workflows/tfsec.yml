@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Clone repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
       - name: Run tfsec
         uses: aquasecurity/tfsec-sarif-action@5d34a982aa8927c5dd8566d25ef248d526aac1f4
